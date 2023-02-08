@@ -16,22 +16,21 @@ h2{
 }
 h3 {
     font-size: 1.4rem;
-    font-weight: 300;
+    font-weight: 400;
 }
 .underline-animation{
    display: inline-block;
    position: relative;
-   color: black;
 }
 .underline-animation::after {
   content: '';
   position: absolute;
   width: 100%;
   transform: scaleX(0);
-  height: 3px;
+  height: 2px;
   bottom: 0;
   left: 0;
-  background-color: black;
+  background-color: #9c9c9c;
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }
