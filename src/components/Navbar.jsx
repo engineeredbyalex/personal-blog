@@ -1,6 +1,5 @@
 import React from 'react'
 import { useState } from 'react';
-import { useRef } from 'react';
 // importing styling
 import "./Navbar.css"
 // importing link
@@ -13,16 +12,18 @@ import { AiOutlineMenu } from "react-icons/ai";
 // importing html
 const navList = document.getElementById("nav_list")
 function Navbar() {
+  // handeling menu side change
+  const [isMobile,setIsMobile] = useState(false)
   const handleMenu = () => {
-    if(navList.classList.contains("hide")){
-      console.log("nonse")
+    if(window.innerWidth < 787){
+      setIsMobile(!isMobile)
     }
     else {
-      console.log("test")
+      setIsMobile(!isMobile)
     }
   }
   return (
-    <nav>
+    <nav className='bg-[#2c2c2c]'>
         <div className='logo'>
             <h2>engineeredbyalex</h2>
         </div>
@@ -46,7 +47,7 @@ function Navbar() {
           <a target="_blank" href="https://www.linkedin.com/in/alexandru-lazarescu-784031252/"><AiFillLinkedin/></a>
         </ul>
       <div className='menu_icon'>
-        <button onClick={handleMenu} className='menu_icon_btn'>
+        <button onClick={() => setIsMobile(!isMobile)} className='menu_icon_btn'>
           <AiOutlineMenu></AiOutlineMenu>
         </button>
       </div>

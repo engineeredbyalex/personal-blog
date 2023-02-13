@@ -23,6 +23,9 @@ nav{
     width: 37vw;
     color: #7e7e7d;
 }
+.nav_list_mobile {
+    display: none;
+}
 .nav_list h3{
     font-size: 1.2rem;
     color: #fff;
@@ -45,7 +48,7 @@ nav{
     background: transparent;
     border: none;
 }
-@media screen and (max-width: 770px) {
+@media screen and (max-width: 787px) {
     nav {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -96,4 +99,10 @@ nav{
     color: #fff;
     transform: scale(2);
     }
+    .nav_list_mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: 2 / 1 / 3 / 3;
+}
 }
